@@ -1,3 +1,7 @@
+/***************************************************************************
+ *  Visualize and plot an event through the RMM matrix 
+****************************************************************************/
+
 #!/usr/bin/env python3
 # plot_rmm_event.py
 # Read Map2RMM CSV, select one event, and plot the (optionally cropped) per-event RMM as a PNG.
@@ -5,7 +9,7 @@
 # Run from command line: 
 #Run as : python plot_rmm.py --csv X2hh.csv
 
-# Your custom view: MET, 10 jets, 8 bjets, 7 muons, 5 electrons, 6 photons
+# Custom setting: MET, 10 jets, 8 bjets, 7 muons, 5 electrons, 6 photons
 #Run as : python plot_rmm_event.py --csv X2hh.csv --event 42 --nj 10 --nb 8 --nm 7 --ne 5 --ng 6
 
 # Choose by row index instead of event number, and adjust log range
