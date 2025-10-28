@@ -1,5 +1,5 @@
 /***************************************************************************
- *  Visualize and plot an event through the RMM matrix 
+ *  Visualize and plot an event through the RMM matrix *
 ****************************************************************************/
 
 #!/usr/bin/env python3
