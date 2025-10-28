@@ -1,6 +1,6 @@
-/***************************************************************************
- *  Prepare RMM matrices from skimmed root files after processing from Delphes/other formats & save as csv file *
-****************************************************************************/
+/***************************************************************************************************************
+ * Prepare RMM matrices from skimmed root files after processing from Delphes/other formats & save as csv file *
+****************************************************************************************************************/
 
 // make_RMMs.C — self-contained RMM CSV exporter (no external libs)
 // Examples:
@@ -26,12 +26,6 @@
 #include <Rtypes.h>  // for ClassDef / ClassImp
 
 using namespace std;
-
-// ============================================================
-// Embedded versions of your CParticle.h and LParticle.h
-// (same fields & method signatures; minimal implementations).
-// Key fix: mark getters as const so calls on const refs compile.
-// ============================================================
 
 // ---------------------- CParticle.h -------------------------
 class CParticle : public TObject {
