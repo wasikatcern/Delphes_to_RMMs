@@ -12,8 +12,3 @@ root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events_100.csv",100)'
 #Specify event number to plot (event# 12 for example below); Inside code you can specify no. of objects you want to plot in matrix
 
 python plot_rmm.py --csv rmm_events_100.csv --event 12
-~                                                                                                                                                           
-~                                                                                                                                                           
-~                                                                                                                                                           
-~                                                                                                                                                           
-~       
