@@ -5,7 +5,7 @@
 
 root -l -b 'skim_Delphes.C("Hplus_1800GeV_SLHA2_delphes.root", "skimmed_delphes.root", 13000, 100)'
 
-#Convert skimmed Delphes file into RMMs; Specify how many events you want to process, for 100 events :
+#Convert skimmed Delphes file into RMMs; Specify how many events you want to process, for 100 events. For all events use -1 :
 
 root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events_100.csv",100)'
 
