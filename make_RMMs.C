@@ -1,3 +1,7 @@
+/***************************************************************************
+ *  Prepare RMM matrices from skimmed root files after processing from Delphes/other formats & save as csv file *
+****************************************************************************/
+
 // make_RMMs.C — self-contained RMM CSV exporter (no external libs)
 // Examples:
 //   root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events_100.csv",100)'
