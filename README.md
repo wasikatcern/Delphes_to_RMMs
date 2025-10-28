@@ -5,9 +5,9 @@
 
 root -l -b 'skim_Delphes.C("Hplus_1800GeV_SLHA2_delphes.root", "skimmed_delphes.root", 13000, 100)'
 
-#Convert skimmed Delphes file into RMMs; Specify how many events you want to process, for 100 events. For all events use -1 :
+#Convert skimmed Delphes file into RMMs; Specify how many events you want to process. For all events use -1 (as shown below), for 100 events use 100 instead of -1 :
 
-root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events_100.csv",100)'
+root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events_100.csv",-1)'
 
 #Specify event number to plot (event# 12 is used below); Inside code, you can specify the number of different objects you want to plot in a matrix
 
