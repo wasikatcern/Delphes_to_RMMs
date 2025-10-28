@@ -267,6 +267,14 @@ static bool parse_args(int argc, char** argv, Opts& o){
 }
 
 // ---------- Selection helpers ----------
+// Event selections defined in code below:
+// iconfig (k) == -1, Meaning: no selection at all.
+// iconfig (k) == 0 or (k) == 2, Meaning: “Single-lepton” selection — at least one muon or electron with pT > leadLepPt 60 GeV.
+// iconfig (k) == 1, Meaning: placeholder for a high-MET selection with MET > 200 GeV
+// iconfig (k) == 3, Meaning: Dilepton selection with leptons (μ + e) with pT > 25 GeV; requires at least 2.
+// iconfig (k) == 6, Meaning: Very-high-pT jet selection with pT > 500 GeV
+// iconfig (k) == 1000, Meaning: Loose jet selection with at least one jet above 30 GeV.
+
 static bool select_event(const Opts& opt, double /*met_pt*/,
                          const vector<LParticle>& mu, const vector<LParticle>& el,
                          const vector<LParticle>& alljets)
@@ -295,6 +303,7 @@ static void sort_by_pt(vector<LParticle>& v){
          return a.GetP().Perp() > b.GetP().Perp();
        });
 }
+
 
 // ---------- Bind vector-leaf schema ----------
 struct VecLeaves {
