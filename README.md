@@ -1,4 +1,4 @@
-# The code converts particle collision events from Delphes files into Rapidity Mass Matrices(RMMs)
+# Convert particle collision events from Delphes files into Rapidity Mass Matrices(RMMs)
 #RMM Reference: "Imaging particle collision data for event classification using machine learning", by S.V. Chekanov, doi = 10.1016/j.nima.2019.04.031
 
 #Convert Delphes file into a skimmed version with relevant information as needed for RMMs. You can specify center of mass energy (say 13000 GeV) and the cross section for which you are scaling it (say 100 pb for example). These skimmed files can also be used in the ADFilter website (https://mc.hep.anl.gov/adfilter).
