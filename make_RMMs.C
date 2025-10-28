@@ -231,11 +231,12 @@ ClassImp(LParticle)
 
 
 // ---------- CLI options ----------
+// Event selection configs; with a lepton>60 GeV pT (iconfig   = 0) as default 
 struct Opts {
   string in, out;
   int maxNumber = 10;   // top-N per object type
   int maxTypes  = 5;    // jets,bjets,mu,el,ph  (+1 row/col is MET)
-  int iconfig   = 0;    // selection config
+  int iconfig   = 0;    // Event selection config
   long long nevents = -1;
   double ptJet = 30.0, ptLep = 30.0, etaJet = 2.4, etaLep = 2.4, leadLepPt = 60.0;
 };
