@@ -10,6 +10,15 @@ Specify how many events you want to process. For all events use -1 (as shown bel
 
 root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events.csv",-1)'
 
+# Reconstruct object properties (pT, eta, phi, etc.) from RMM matrix:
+
+#Print only event #5 (for example):
+python rmm_reconstruct.py --csv rmm_events_100.csv --event 5
+#Also include pairwise Δφ matrices:
+python rmm_reconstruct.py --csv rmm_events_100.csv --event 5 --pairs
+#Save tidy per-object table for that one event:
+python rmm_reconstruct.py --csv rmm_events_100.csv --event 5 --save reco_evt5.csv
+
 # Convert RMMs into an additional compact format with 20 elements, starting from skimmed root file:
 root -l -b -q 'make_RMMs_compact20.C("skimmed_delphes.root","rmm_events.csv",-1)'
 
