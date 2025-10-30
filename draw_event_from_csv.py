@@ -20,7 +20,7 @@ RMM CSV (.csv/.csv.gz) → reconstruct (pT≈ET, |η|, φ) and save TWO event di
        -1.0 ↔ 139.6°, -2.5 ↔ 170.6°, -4.0 ↔ 177.9°
 
 Usage:
-  python daw_event_from_csv.py --csv rmm_events_100.csv.gz --event 10
+  python draw_event_from_csv.py --csv rmm_events_100.csv.gz --event 10
 Common options:
   --cms 13000
   --eta-guides 0 1 2.5 4.0
