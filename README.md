@@ -15,6 +15,8 @@ root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events.csv",-1)'
 
 # Visualize an RMM matrix for any event (from csv file):
 
+Specify event number to plot (event# 12 is used below); Inside code, you can specify the number of different objects you want to plot in a matrix
+
 python plot_rmm.py --csv rmm_events.csv --event 12
 
 
@@ -38,8 +40,6 @@ python draw_event_from_csv.py --csv rmm_events_100.csv.gz --event 10
 
 # Convert RMMs into an additional compact format with 20 elements, starting from skimmed root file:
 root -l -b -q 'make_RMMs_compact20.C("skimmed_delphes.root","rmm_events.csv",-1)'
-
-Specify event number to plot (event# 12 is used below); Inside code, you can specify the number of different objects you want to plot in a matrix
 
 # Convert RMMs from csv.gz file into compact format with 20 elements
 
