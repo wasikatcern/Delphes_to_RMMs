@@ -13,11 +13,20 @@ root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events.csv",-1)'
 # Reconstruct object properties (pT, eta, phi, etc.) from RMM matrix:
 
 #Print only event #5 (for example):
-python rmm_reconstruct.py --csv rmm_events_100.csv --event 5
+python rmm_reconstruct.py --csv rmm_events_100.csv.gz --event 5
+
 #Also include pairwise Δφ matrices:
-python rmm_reconstruct.py --csv rmm_events_100.csv --event 5 --pairs
+python rmm_reconstruct.py --csv rmm_events_100.csv.gz --event 5 --pairs
+
 #Save tidy per-object table for that one event:
-python rmm_reconstruct.py --csv rmm_events_100.csv --event 5 --save reco_evt5.csv
+python rmm_reconstruct.py --csv rmm_events_100.csv.gz --event 5 --save reco_evt5.csv
+
+# Draw event display from RMM matrix & from csv.gz (& .csv) files :
+
+To draw event#10 from rmm_events_100.csv.gz, use following command. It will draw 2 sets of images, one display with polar angle, and other with pT-eta coordinates :
+
+ python daw_event_from_csv.py --csv rmm_events_100.csv.gz --event 10
+
 
 # Convert RMMs into an additional compact format with 20 elements, starting from skimmed root file:
 root -l -b -q 'make_RMMs_compact20.C("skimmed_delphes.root","rmm_events.csv",-1)'
