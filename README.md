@@ -5,10 +5,18 @@ Convert Delphes file into a skimmed version with relevant information as needed 
 
 root -l -b 'skim_Delphes.C("Hplus_1800GeV_SLHA2_delphes.root", "skimmed_delphes.root", 13000, 100)'
 
+# Draw a simple event display for any event (from skimmed root file):
+python draw_event_display.py --event 4
+
 # Convert skimmed Delphes file into RMMs:
 Specify how many events you want to process. For all events use -1 (as shown below), for 100 events use 100 instead of -1. It also save a "_selected.root" file storing events that passed event selections :
 
 root -l -b -q 'make_RMMs.C("skimmed_delphes.root","rmm_events.csv",-1)'
+
+# Visualize an RMM matrix for any event (from csv file):
+
+python plot_rmm.py --csv rmm_events.csv --event 12
+
 
 # Reconstruct object properties (pT, eta, phi, etc.) from RMM matrix:
 
@@ -39,8 +47,3 @@ Specify event number to plot (event# 12 is used below); Inside code, you can spe
   For only one event (it will also make a bar chart for 1 event), do :
   python rmm_compact20.py --csv out/tev13.6pp_pythia8_ttbar_2lep_data10percent.csv.gz --event 1
 
-# Visualize an RMM matrix for any event (from csv file):
-python plot_rmm.py --csv rmm_events.csv --event 12
-
-# Draw a simple event display for any event (from skimmed root file):
-python draw_event_display.py --event 4
