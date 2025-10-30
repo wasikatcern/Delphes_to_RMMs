@@ -31,9 +31,9 @@ python rmm_reconstruct.py --csv rmm_events_100.csv.gz --event 5 --save reco_evt5
 
 # Draw event display from RMM matrix & from csv.gz (& .csv) files :
 
-To draw event#10 from rmm_events_100.csv.gz, use following command. It will draw 2 sets of images, one display with polar angle, and other with pT-eta coordinates :
+To draw event#10 from rmm_events_100.csv.gz, use the following command. It will draw 2 sets of images, one display with polar angle, and other with pT-eta coordinates :
 
- python daw_event_from_csv.py --csv rmm_events_100.csv.gz --event 10
+python draw_event_from_csv.py --csv rmm_events_100.csv.gz --event 10
 
 
 # Convert RMMs into an additional compact format with 20 elements, starting from skimmed root file:
@@ -42,8 +42,9 @@ root -l -b -q 'make_RMMs_compact20.C("skimmed_delphes.root","rmm_events.csv",-1)
 Specify event number to plot (event# 12 is used below); Inside code, you can specify the number of different objects you want to plot in a matrix
 
 # Convert RMMs from csv.gz file into compact format with 20 elements
- python rmm_compact20.py --csv out/tev13.6pp_pythia8_ttbar_2lep_data10percent.csv.gz
 
-  For only one event (it will also make a bar chart for 1 event), do :
-  python rmm_compact20.py --csv out/tev13.6pp_pythia8_ttbar_2lep_data10percent.csv.gz --event 1
+python rmm_compact20.py --csv out/tev13.6pp_pythia8_ttbar_2lep_data10percent.csv.gz
+
+For only one event (it will also make a bar chart for 1 event), do :
+python rmm_compact20.py --csv out/tev13.6pp_pythia8_ttbar_2lep_data10percent.csv.gz --event 1
 
