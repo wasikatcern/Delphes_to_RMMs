@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-daw_event_from_csv.py
+draw_event_from_csv.py
 
 RMM CSV (.csv/.csv.gz) → reconstruct (pT≈ET, |η|, φ) and save TWO event displays:
 
