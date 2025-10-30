@@ -39,8 +39,8 @@ Specify event number to plot (event# 12 is used below); Inside code, you can spe
   For only one event (it will also make a bar chart for 1 event), do :
   python rmm_compact20.py --csv out/tev13.6pp_pythia8_ttbar_2lep_data10percent.csv.gz --event 1
 
-# Visualize an RMM matrix for any event:
+# Visualize an RMM matrix for any event (from csv file):
 python plot_rmm.py --csv rmm_events.csv --event 12
 
-# Draw a simple event display for any event:
+# Draw a simple event display for any event (from skimmed root file):
 python draw_event_display.py --event 4
